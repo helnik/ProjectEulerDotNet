@@ -28,6 +28,12 @@ namespace TestProblemsConsole
             //Problem4
             res = Problem4.Solution1();
             Console.WriteLine($"Problem4 first solution result = {res.Result} found in {res.TimeTaken} ms");
+
+            //Problem5
+            res = Problem5.Solution1();
+            Console.WriteLine($"Problem5 first solution result = {res.Result} found in {res.TimeTaken} ms");
+            res = Problem5.Solution2();
+            Console.WriteLine($"Problem5 second solution result = {res.Result} found in {res.TimeTaken} ms");
             Console.ReadKey();
         }
     }
