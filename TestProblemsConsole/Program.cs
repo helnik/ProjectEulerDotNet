@@ -17,6 +17,8 @@ namespace TestProblemsConsole
             //Problem2
             res = Problem2.Solution1();
             Console.WriteLine($"Problem2 first solution result = {res.Result} found in {res.TimeTaken} ms");
+            res = Problem2.Solution2();
+            Console.WriteLine($"Problem2 second solution result = {res.Result} found in {res.TimeTaken} ms");
 
             //Problem3
             //res = Problem3.Solution1(); Extremly slow

@@ -32,5 +32,35 @@ namespace Problems
                 TimeTaken = sw.Elapsed.TotalMilliseconds
             };
         }
+
+        /// <summary>
+        /// There is a pattern that every third number is even starting at F3, so if we can express Fn in terms of Fn-3, Fn-6 then we only has to deal with even numbers
+        /// Fn = Fn-1 + Fn-2 =
+        /// Fn-2 + Fn-3 + Fn-3 +Fn-4 = (since Fn-1 = Fn-2 + Fn-3 and so on)
+        /// Fn-3 + Fn-4 + Fn-3 +Fn-3 +Fn-4 = 3Fn-3 + 2Fn-4 =
+        /// 3Fn-3 + Fn-4 + Fn-5 + Fn-6) =
+        /// 4Fn-3 + Fn-6 (since Fn-4 + Fn-5 = Fn-3)
+        /// Source: https://www.mathblog.dk/project-euler-problem-2/
+        /// </summary>
+        public static Answer Solution2(long maxValue = 4000000)
+        {
+            Stopwatch sw = Stopwatch.StartNew();
+            long fib3 = 2, fib6 = 0, result = 2, summed = 0;
+
+            while (result < 4000000)
+            {
+                summed += result;
+
+                result = 4 * fib3 + fib6;
+                fib6 = fib3;
+                fib3 = result;
+                sw.Stop();
+            }
+            return new Answer
+            {
+                Result = summed,
+                TimeTaken = sw.Elapsed.TotalMilliseconds
+            };
+        }
     }
 }
