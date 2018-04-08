@@ -32,14 +32,15 @@ namespace Problems
         }
 
         /// <summary>
-        /// Sum of all naturals is S(n) = n(n+1) / 2
-        /// Sum of all squares is S(n^2) = n(n+1)(2n+1) / 6
+        /// Sum of all naturals is S(n) = n(n+1)/2
+        /// Sum of all squares is S(n^2) = n(n+1)(2n+1)/6 
+        /// Sum of all squares combining sum of all = (((2n+1)*S(n))/3
         /// </summary>
         public static Answer Solution2(long number = 100)
         {
             Stopwatch sw = Stopwatch.StartNew();
             long naturalsSum = (number * (number + 1)) / 2;
-            long naturalsSquaresSummed = (number * (number + 1) * (2 * number + 1)) / 6;
+            long naturalsSquaresSummed = (((2 * number) + 1) * naturalsSum) / 3;
             
             sw.Stop();
             return new Answer
