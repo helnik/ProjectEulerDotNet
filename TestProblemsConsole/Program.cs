@@ -1,13 +1,15 @@
 ﻿using Problems;
 using System;
+using System.Collections.Generic;
 
 namespace TestProblemsConsole
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Answer res;
+            
             //Problem1
             res = Problem1.Solution1();
             Console.WriteLine($"Problem1 first solution result = {res.Result} found in {res.TimeTaken} ms");
@@ -42,6 +44,10 @@ namespace TestProblemsConsole
             Console.WriteLine($"Problem6 first solution result = {res.Result} found in {res.TimeTaken} ms");
             res = Problem6.Solution2();
             Console.WriteLine($"Problem6 second solution result = {res.Result} found in {res.TimeTaken} ms");
+            
+            //Problem 7
+            res = Problem7.Solution1();
+            Console.WriteLine($"Problem7 first solution result = {res.Result} found in {res.TimeTaken} ms");
 
             Console.ReadKey();
         }
