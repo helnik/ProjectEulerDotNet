@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProblemsConsole", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems", "Problems\Problems.csproj", "{CA5F5FA0-6E9E-4903-B01C-B04796CD7A51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathUtilsTests", "MathUtilsTests\MathUtilsTests.csproj", "{082CA50E-CE76-487D-BBF8-56570F6D6531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathUtils", "MathUtils\MathUtils.csproj", "{CEBDF6D7-C39B-4765-99C9-D84F2EF1D20A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{CA5F5FA0-6E9E-4903-B01C-B04796CD7A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA5F5FA0-6E9E-4903-B01C-B04796CD7A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA5F5FA0-6E9E-4903-B01C-B04796CD7A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{082CA50E-CE76-487D-BBF8-56570F6D6531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{082CA50E-CE76-487D-BBF8-56570F6D6531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{082CA50E-CE76-487D-BBF8-56570F6D6531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{082CA50E-CE76-487D-BBF8-56570F6D6531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBDF6D7-C39B-4765-99C9-D84F2EF1D20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBDF6D7-C39B-4765-99C9-D84F2EF1D20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBDF6D7-C39B-4765-99C9-D84F2EF1D20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBDF6D7-C39B-4765-99C9-D84F2EF1D20A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
