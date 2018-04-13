@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MathUtilsTests
 {
     [TestClass]
-    public class UnitTest1
+    public class UtilsTests
     {
         [TestMethod]
         public void TestIsPrime()
