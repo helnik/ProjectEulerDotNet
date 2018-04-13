@@ -57,6 +57,10 @@ namespace TestProblemsConsole
             res = Problem9.Solution1();
             Console.WriteLine($"Problem9 first solution result = {res.Result} found in {res.TimeTaken} ms. Digits = {res.ExtraInfo}");
 
+            //Problem 10
+            res = Problem10.Solution1();
+            Console.WriteLine($"Problem10 first solution result = {res.Result} found in {res.TimeTaken} ms.");
+
             Console.ReadKey();
         }
     }
