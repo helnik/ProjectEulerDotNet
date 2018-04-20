@@ -99,5 +99,64 @@ namespace Problems
             return numbers;
         }
         #endregion
+
+        #region Solution3
+        /// <summary>
+        /// Solution using Sieve of Atkin
+        /// </summary>
+        public static Answer Solution3(long number = 2000000)
+        {
+            Stopwatch sw = Stopwatch.StartNew();
+            ulong sum = 0;
+            var primes = SieveOfAtkin((ulong)number);
+            foreach (var p in primes)
+                sum += p;
+            sw.Stop();
+            return new Answer
+            {
+                Result = (long)sum,
+                TimeTaken = sw.Elapsed.TotalMilliseconds,
+                ExtraInfo = "Algorithm used = Sieve of Atkin"
+            };
+        }
+
+        private static IEnumerable<ulong> SieveOfAtkin(ulong max)
+        {
+            var isPrime = new bool[max + 1];
+            var sqrt = Math.Sqrt(max);
+
+            for (ulong x = 1; x <= sqrt; x++)
+            for (ulong y = 1; y <= sqrt; y++)
+            {
+                var xsq = x * x;
+                var ysq = y * y;
+                var n = 4 * xsq + ysq;
+
+                if (n <= max && (n % 12 == 1 || n % 12 == 5))
+                    isPrime[n] ^= true;
+
+                n = 3 * xsq + ysq;
+                if (n <= max && n % 12 == 7)
+                    isPrime[n] ^= true;
+
+                n = 3 * xsq - ysq;
+                if (x > y && n <= max && n % 12 == 11)
+                    isPrime[n] ^= true;
+            }
+
+            for (ulong n = 5; n <= sqrt; n++)
+                if (isPrime[n])
+                {
+                    var s = n * n;
+                    for (ulong k = s; k <= max; k += s)
+                        isPrime[k] = false;
+                }
+
+            yield return 2;
+            yield return 3;
+            for (ulong n = 5; n <= max; n += 2)
+                if (isPrime[n]) yield return n;
+        }
+        #endregion
     }
 }
