@@ -39,5 +39,47 @@ namespace MathUtils
             }
             return numbers;
         }
+
+        /// <summary>
+        /// Performs an Atkin sieve to find primes.
+        /// Source: https://github.com/SuprDewd/SharpBag
+        /// </summary>
+        public static IEnumerable<ulong> SieveOfAtkin(ulong max)
+        {
+            var isPrime = new bool[max + 1];
+            var sqrt = Math.Sqrt(max);
+
+            for (ulong x = 1; x <= sqrt; x++)
+            for (ulong y = 1; y <= sqrt; y++)
+            {
+                var xsq = x * x;
+                var ysq = y * y;
+                var n = 4 * xsq + ysq;
+
+                if (n <= max && (n % 12 == 1 || n % 12 == 5))
+                    isPrime[n] ^= true;
+
+                n = 3 * xsq + ysq;
+                if (n <= max && n % 12 == 7)
+                    isPrime[n] ^= true;
+
+                n = 3 * xsq - ysq;
+                if (x > y && n <= max && n % 12 == 11)
+                    isPrime[n] ^= true;
+            }
+
+            for (ulong n = 5; n <= sqrt; n++)
+                if (isPrime[n])
+                {
+                    var s = n * n;
+                    for (ulong k = s; k <= max; k += s)
+                        isPrime[k] = false;
+                }
+
+            yield return 2;
+            yield return 3;
+            for (ulong n = 5; n <= max; n += 2)
+                if (isPrime[n]) yield return n;
+        }
     }
 }
