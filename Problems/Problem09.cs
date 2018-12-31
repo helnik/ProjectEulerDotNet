@@ -11,7 +11,7 @@ namespace Problems
     /// There exists exactly one Pythagorean triplet for which a + b + c = 1000.
     /// Find the product abc.
     /// </summary>
-    public static class Problem9
+    public static class Problem09
     {
         /// <summary>
         ///  a &lt; b &lt; c and a &lt sum/3 b &lt; sum/2, 

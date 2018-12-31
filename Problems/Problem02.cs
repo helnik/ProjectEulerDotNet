@@ -9,7 +9,7 @@ namespace Problems
     /// 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
     /// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
     /// </summary>
-    public static class Problem2
+    public static class Problem02
     {
         public static Answer Solution1(long maxValue = 4000000)
         {

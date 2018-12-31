@@ -33,7 +33,7 @@ namespace Problems
     /// 71636269561882670428252483600823257530420752963450
     /// Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
     /// </summary>
-    public static class Problem8
+    public static class Problem08
     {
         private const string Digits1000 = 
         "73167176531330624919225119674426574742355349194934" +

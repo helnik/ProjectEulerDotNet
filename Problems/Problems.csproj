@@ -41,16 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Answer.cs" />
-    <Compile Include="Problem1.cs" />
+    <Compile Include="Problem01.cs" />
     <Compile Include="Problem10.cs" />
-    <Compile Include="Problem2.cs" />
-    <Compile Include="Problem3.cs" />
-    <Compile Include="Problem4.cs" />
-    <Compile Include="Problem5.cs" />
-    <Compile Include="Problem6.cs" />
-    <Compile Include="Problem7.cs" />
-    <Compile Include="Problem8.cs" />
-    <Compile Include="Problem9.cs" />
+    <Compile Include="Problem02.cs" />
+    <Compile Include="Problem03.cs" />
+    <Compile Include="Problem04.cs" />
+    <Compile Include="Problem05.cs" />
+    <Compile Include="Problem06.cs" />
+    <Compile Include="Problem07.cs" />
+    <Compile Include="Problem08.cs" />
+    <Compile Include="Problem09.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

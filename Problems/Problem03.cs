@@ -9,7 +9,7 @@ namespace Problems
     /// What is the largest prime factor of the number 600851475143 ?   
     /// Learn: To get an idea of factor calculation a read this article: https://www.mathsisfun.com/prime-factorization.html
     /// </summary>
-    public static class Problem3
+    public static class Problem03
     {
         /// <summary>
         /// Initial thought. Really slow. Never let it end cause life.
